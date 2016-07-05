@@ -1,0 +1,11 @@
+---
+- hosts: ldapserver
+  user: ubuntu
+  sudo: yes
+  vars_files:
+    - vars/main.yml
+#    - vars/private.yml
+  tasks:
+    - include: tasks/main.yml
+  handlers:
+    - include: handlers/main.yml
